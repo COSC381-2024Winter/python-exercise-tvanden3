@@ -1,7 +1,11 @@
 from movies import Movies
 
 movies = Movies('./movies.txt')
-#def movies_n(name):
+def movies_n(answer):
+    for i in range(len(movies._movies)):
+        if str(answer).lower() in movies._movies[i]['name'].lower():
+            print(movies._movies[i]['name'])
+    print()   
 def movie_list():
     for i in range(len(movies._movies)):
         print(movies._movies[i]['name'])
@@ -16,6 +20,7 @@ while choice != 'q':
     print("list: Print all the Movie Names")
     print("q: quit") 
     choice = input("").lower()
+    print()
 
     if choice == "sn":
         keyb = input("enter a word to search: ")
