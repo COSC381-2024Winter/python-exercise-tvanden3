@@ -1,10 +1,15 @@
 from movies import Movies
 
 movies = Movies('./movies.txt')
-#def movies_n(answer):
-#def movie_list():
-#def cast_search(answer):
+#def movies_n(name):
+def movie_list():
+    for i in range(len(movies._movies)):
+        print(movies._movies[i]['name'])
+    print()
+#def cast_search(answer)
 choice = ' '
+
+
 while choice != 'q':
     print("sn: Search Movies by Name")
     print("sc: Search by Cast")
